@@ -23,4 +23,15 @@ internal class StringCalculatorTest {
 
         assertEquals(expected, result)
     }
+
+    @Test
+    fun givenIHaveAnInputOfNumbers_whenAddIsCalled_thenTheSumIsReturned() {
+        val numbers = "14,5,42,32,67"
+        val expected = 160
+        val calculator = StringCalculator()
+
+        val result = calculator.add(numbers)
+
+        assertEquals(expected, result)
+    }
 }
