@@ -1,5 +1,8 @@
 # string-calculator
 Attempt practicing TDD using the String Calculator Kata. Written in Kotlin
+
+Link to Kata: https://osherove.com/tdd-kata-1
+
 ##Kata Description
 Before you start: 
 Try not to read ahead.
