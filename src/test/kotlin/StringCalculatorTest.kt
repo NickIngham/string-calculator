@@ -69,4 +69,15 @@ internal class StringCalculatorTest {
         assertEquals(expectedMessage, exception.message)
     }
 
+    @Test
+    fun givenIHaveNumbersBiggerThan1000_whenAddIsCalled_thenAnExceptionIsThrownSpecifyingTheNegativeNumbers() {
+        val numbers = "14,5,1001,32,2932"
+        val expected = 51
+        val calculator = StringCalculator()
+
+        val result =  calculator.add(numbers)
+
+        assertEquals(expected, result)
+    }
+
 }

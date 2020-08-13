@@ -20,7 +20,7 @@ class StringCalculator {
         val negativeNumbers = numbers.filter { it < 0 }
         negativeNumbers.takeUnless { it.isNotEmpty() }
             ?: throw Exception("The array contains these negative Numbers: $negativeNumbers")
-        return numbers.sum()
+        return numbers.filter { it < 1000 }.sum()
     }
 
 
