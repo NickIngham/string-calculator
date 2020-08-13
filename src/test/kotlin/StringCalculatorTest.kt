@@ -34,4 +34,16 @@ internal class StringCalculatorTest {
 
         assertEquals(expected, result)
     }
+
+    @Test
+    fun givenIHaveAnInputSeparatedByLineBreaksAndCommas_whenAddIsCalled_thenTheSumIsReturned() {
+        val numbers = "14,5\n42,32\n67"
+        val expected = 160
+        val calculator = StringCalculator()
+
+        val result = calculator.add(numbers)
+
+        assertEquals(expected, result)
+    }
+
 }
