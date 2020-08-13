@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
+import java.lang.Exception
 
 internal class StringCalculatorTest {
     @Test
@@ -55,6 +56,17 @@ internal class StringCalculatorTest {
         val result = calculator.add(numbers)
 
         assertEquals(expected, result)
+    }
+
+    @Test
+    fun givenIHaveNegativeNumbers_whenAddIsCalled_thenAnExceptionIsThrownSpecifyingTheNegativeNumbers() {
+        val numbers = "14,-5,42,-32,67"
+        val expectedMessage = "The array contains these negative Numbers: [-5, -32]"
+        val calculator = StringCalculator()
+
+       val exception = assertThrows(Exception::class.java) {calculator.add(numbers)}
+
+        assertEquals(expectedMessage, exception.message)
     }
 
 }
